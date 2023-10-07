@@ -74,7 +74,7 @@ hr {
 main {
   position: relative;
   z-index: 1;
-  margin: 0px 30px 30px 30px;
+  margin: 0px 50px 30px 50px;
 }
 
 .intro .text {
@@ -131,12 +131,13 @@ main {
 .coursesSection {
   background-color: white;
   color: black;
-  padding: 20px;
   clear: both;
+  position: relative;
+  margin-bottom: 150px;
 }
 
-.coursesSection h2{
-    font-size: 3.0rem;
+.coursesSection h2 {
+  font-size: 3rem;
 }
 
 .courseContainers {
@@ -156,14 +157,34 @@ main {
   cursor: pointer;
   background-color: #efefef;
   border-radius: 8px;
+  width: 30%;
 }
 
 .container img {
   margin-bottom: 10px;
   border-radius: 5px;
+  width: 100%;
 }
 
 .title {
   font-size: 20px;
   font-weight: bold;
 }
+
+.explore {
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.categories h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+
