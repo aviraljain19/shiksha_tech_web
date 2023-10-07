@@ -1,171 +1,169 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Roboto Slab', serif;
+body {
+  font-family: "Roboto Slab", serif;
 }
 
-
-header{
-    display: flex;
-    background-color: white;
-    color: black;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
-    position: fixed;
-    right: 0;
-    left: 0;
-    top: 0;
-    z-index: 2;
+header {
+  display: flex;
+  background-color: white;
+  color: black;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 0;
+  z-index: 2;
 }
 
-header h1{
-    font-size: 24px;
-    letter-spacing: 2px;
-    font-family: Arial, Helvetica, sans-serif;
+header h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-header ul{
-    list-style: none;
-    display: flex;
+header ul {
+  list-style: none;
+  display: flex;
 }
 
-header ul li{
-    margin: 0px 20px 0px 0px
+header ul li {
+  margin: 0px 20px 0px 0px;
 }
 
-header ul li a{
-    color: black;
-    text-decoration: none;
+header ul li a {
+  color: black;
+  text-decoration: none;
 }
 
-header ul li a:hover{
-    box-sizing: content-box;
-    padding: 3px;
-    background-color: #efefef;
-    border-radius: 5px;
+header ul li a:hover {
+  box-sizing: content-box;
+  padding: 3px;
+  background-color: #efefef;
+  border-radius: 5px;
 }
 
-.btn .login{
-    background-color: white;
-    border-radius: 25px;
-    padding: 10px;
-    width: 100px;
-    cursor: pointer;
-    margin-right: 10px;
+.btn .login {
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  margin-right: 10px;
 }
 
-.btn .signUp{
-    background-color: black;
-    color: white;
-    border-radius: 25px;
-    padding: 10px;
-    width: 100px;
-    cursor: pointer;
+.btn .signUp {
+  background-color: black;
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
 }
 
-
-hr{
-    margin-top: 70px;
+hr {
+  margin-top: 70px;
 }
 
-main{
-    position: relative;
-    z-index: 1;
-    margin: 0px 30px 30px 30px;
+main {
+  position: relative;
+  z-index: 1;
+  margin: 0px 30px 30px 30px;
 }
 
-.intro .text{
-    margin-top: 50px;
-    width: 60%;
-    float: left;
+.intro .text {
+  margin-top: 50px;
+  width: 60%;
+  float: left;
 }
 
-.intro aside{
-    width: 30%;
-    float: left;
+.intro aside {
+  width: 30%;
+  float: left;
 }
 
-.bText{
-    font-size: 80px;
-    font-weight: 500;
+.bText {
+  font-size: 80px;
+  font-weight: 500;
 }
 
-.sText{
-    margin-top: 20px;
-    font-size: 24px;
-    color: rgb(100, 100, 100);
+.sText {
+  margin-top: 20px;
+  font-size: 24px;
+  color: rgb(100, 100, 100);
 }
 
-.searchSection{
-    margin-top: 60px;
-    display: flex;
-    
+.searchSection {
+  margin-top: 60px;
+  display: flex;
 }
 
-.search{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    width: 90%;
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90%;
 }
 
-.search input{
-    padding: 10px;
-    position: relative;
-    border-radius: 25px;
-    width: 100%;
-    height: 60px;
-    font-size: 1.2rem;
+.search input {
+  padding: 10px;
+  position: relative;
+  border-radius: 25px;
+  width: 100%;
+  height: 60px;
+  font-size: 1.2rem;
 }
 
-.search i{
-    position: absolute;
-    right: 20px;
-    font-size: 1.2rem;
-    cursor: pointer;
+.search i {
+  position: absolute;
+  right: 20px;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
 
-.coursesSection{
-    background-color: white;
-    color: black;
-    padding: 20px;
-    clear: both;
+.coursesSection {
+  background-color: white;
+  color: black;
+  padding: 20px;
+  clear: both;
 }
 
-.courseContainers{
-    display: flex;
-    overflow-x: scroll;
-    margin-bottom: 20px;
+.coursesSection h2{
+    font-size: 3.0rem;
 }
 
-.courseContainers::-webkit-scrollbar{
-    display: none;
+.courseContainers {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
-.container{
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
-    margin: 20px 20px 10px 0px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    cursor: pointer;
-    background-color: #efefef;
-    border-radius: 8px;
+.container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+  margin: 20px 20px 10px 0px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #efefef;
+  border-radius: 8px;
 }
 
-.container img{
-    margin-bottom: 10px;
-    border-radius: 5px;
+.container img {
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
-.title{
-    font-size: 20px;
-    font-weight: bold;
+.title {
+  font-size: 20px;
+  font-weight: bold;
 }
