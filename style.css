@@ -116,17 +116,53 @@ button {
     border-radius: 10px;
 }
 
-.category-item, .testimonial-item, .footer-item {
-    margin: 10px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    display: inline-block;
+/* Styles for category grid */
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
 }
 
+/* Updated styles for category item with hover effect */
+.category-item {
+    padding: 40px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+.category-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+/* New styles for testimonials */
+.testimonial-item {
+    max-width: 800px;
+    margin: auto;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Styles for footer */
 footer {
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     padding: 20px;
     background-color: #4E74F9;
     color: white;
+    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
+}
+
+.footer-item {
+    cursor: pointer;
+}
+
+.footer-item:hover {
+    text-decoration: underline;
 }
