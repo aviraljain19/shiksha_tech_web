@@ -4,19 +4,29 @@
     box-sizing: border-box;
 }
 
+body{
+    font-family: 'Roboto Slab', serif;
+}
+
+
 header{
     display: flex;
-    background-color: #4E74F9;
-    color: white;
+    background-color: white;
+    color: black;
     justify-content: space-between;
     padding: 20px;
     align-items: center;
-    font-family: 'Young Serif', serif;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 2;
 }
 
 header h1{
     font-size: 24px;
     letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 header ul{
@@ -25,18 +35,76 @@ header ul{
 }
 
 header ul li{
-    margin: 0px 10px 0px 10px
+    margin: 0px 20px 0px 0px
 }
 
 header ul li a{
-    color: white;
+    color: black;
     text-decoration: none;
 }
 
+header ul li a:hover{
+    box-sizing: content-box;
+    padding: 3px;
+    background-color: #efefef;
+    border-radius: 5px;
+}
+
+.btn .login{
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.btn .signUp{
+    background-color: black;
+    color: white;
+    border-radius: 25px;
+    padding: 10px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+hr{
+    margin-top: 70px;
+}
+
 main{
-    margin: 20px;
+    position: relative;
+    z-index: 1;
+    margin: 0px 30px 30px 30px;
+}
+
+.intro .text{
+    margin-top: 50px;
+    width: 60%;
+    float: left;
+}
+
+.intro aside{
+    width: 30%;
+    float: left;
+}
+
+.bText{
+    font-size: 80px;
+    font-weight: 500;
+}
+
+.sText{
+    margin-top: 20px;
+    font-size: 24px;
+    color: rgb(100, 100, 100);
+}
+
+.searchSection{
+    margin-top: 60px;
     display: flex;
-    justify-content: center;
+    
 }
 
 .search{
@@ -44,158 +112,60 @@ main{
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 30%;
+    width: 90%;
 }
 
 .search input{
     padding: 10px;
     position: relative;
-    border-radius: 10px;
+    border-radius: 25px;
     width: 100%;
-    
+    height: 60px;
+    font-size: 1.2rem;
 }
 
 .search i{
     position: absolute;
-    right: 10px;
+    right: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
-/* Updated styles for the search section */
-.search-section {
+
+.coursesSection{
+    background-color: white;
+    color: black;
+    padding: 20px;
+    clear: both;
+}
+
+.courseContainers{
     display: flex;
-    margin: 20px auto;
-    max-width: 600px;
-    position: relative;
+    overflow-x: scroll;
+    margin-bottom: 20px;
 }
 
-/* Style for the new course section */
-.courses-section {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.courseContainers::-webkit-scrollbar{
+    display: none;
 }
 
-/* Style for individual course item */
-.course-item {
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    transition: transform .2s ease-in-out;
-}
-
-.course-item:hover {
-    transform: scale(1.05);
-}
-
-/* Hover effect for navigation */
-header ul li a:hover {
-    border-bottom: 2px solid white;
-}
-
-/* Style for search button */
-button {
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-.featured, .categories, .testimonials {
-    padding: 20px;
-    text-align: center;
-}
-
-.carousel {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.carousel .course-item {
-    color: white;
-    background-color: #4E74F9;
-    padding: 40px;
-    margin: 10px;
-    border-radius: 10px;
-}
-
-/* Styles for category grid */
-.category-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-/* Updated styles for category item with hover effect */
-.category-item {
-    padding: 40px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    transition: all .3s ease-in-out;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    cursor: pointer;
-}
-
-.category-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-/* New styles for testimonials */
-.testimonial-item {
-    max-width: 800px;
-    margin: auto;
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-}
-
-/* Styles for footer */
-footer {
+.container{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 8px;
+    margin: 20px 20px 10px 0px;
+    padding: 10px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 20px;
-    background-color: #4E74F9;
-    color: white;
-    box-shadow: 0 -4px 6px rgba(0,0,0,0.1);
-}
-
-.footer-item {
+    flex-direction: column;
+    justify-content: center;
     cursor: pointer;
+    background-color: #efefef;
+    border-radius: 8px;
 }
 
-.footer-item:hover {
-    text-decoration: underline;
+.container img{
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    header nav ul {
-        padding-top: 10px;
-    }
-
-    .search {
-        width: 90%;
-    }
-
-    .categories .category-grid, .courses-section {
-        grid-template-columns: 1fr;
-        gap: 10px;
-    }
-
-    .category-item, .course-item {
-        padding: 20px;
-    }
-
-    footer {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    footer .footer-item {
-        padding: 10px;
-    }
+.title{
+    font-size: 20px;
+    font-weight: bold;
 }
