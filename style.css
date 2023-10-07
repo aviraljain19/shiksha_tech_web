@@ -59,3 +59,42 @@ main{
     position: absolute;
     right: 10px;
 }
+/* Updated styles for the search section */
+.search-section {
+    display: flex;
+    margin: 20px auto;
+    max-width: 600px;
+    position: relative;
+}
+
+/* Style for the new course section */
+.courses-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for individual course item */
+.course-item {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    transition: transform .2s ease-in-out;
+}
+
+.course-item:hover {
+    transform: scale(1.05);
+}
+
+/* Hover effect for navigation */
+header ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Style for search button */
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
