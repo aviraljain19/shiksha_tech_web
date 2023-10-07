@@ -84,8 +84,12 @@ main {
 }
 
 .intro aside {
-  width: 30%;
+  width: 40%;
   float: left;
+}
+
+.intro aside img{
+    width: 100%;
 }
 
 .bText {
@@ -134,6 +138,7 @@ main {
   clear: both;
   position: relative;
   margin-bottom: 150px;
+  top: 30px;
 }
 
 .coursesSection h2 {
@@ -203,6 +208,42 @@ main {
   text-align: center;
   font-size: 18px;
 }
+
+footer{
+    background-color: black;
+    color: white;
+    display: flex;
+    padding: 10px;
+    justify-content:space-around;
+}
+
+footer h3{
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+footer p{
+    
+    color: #a7a7a7;
+    font-size: 14px;
+}
+
+footer .f1{
+    width: 25%;
+}
+
+footer .f2 ul{
+    list-style: none;
+}
+
+footer .f2 ul li a{
+    color: #a7a7a7;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+
+
 
 @-moz-keyframes marquee {
   0% {
