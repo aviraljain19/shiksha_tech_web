@@ -185,6 +185,50 @@ main {
 .categories h2 {
   font-size: 3rem;
   text-align: center;
+  margin-bottom: 10px;
 }
 
+.categoryContainers {
+  display: flex;
+  -moz-animation: marquee 10s linear infinite;
+  -webkit-animation: marquee 10s linear infinite;
+  animation: marquee 10s linear infinite;
+}
 
+.categoryContainers .container {
+  width: 20%;
+}
+
+.categoryContainers .title {
+  text-align: center;
+  font-size: 18px;
+}
+
+@-moz-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@-webkit-keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes marquee {
+  0% {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+  100% {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+}
