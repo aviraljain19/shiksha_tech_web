@@ -98,3 +98,35 @@ button {
     border: none;
     cursor: pointer;
 }
+.featured, .categories, .testimonials {
+    padding: 20px;
+    text-align: center;
+}
+
+.carousel {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.carousel .course-item {
+    color: white;
+    background-color: #4E74F9;
+    padding: 40px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.category-item, .testimonial-item, .footer-item {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #4E74F9;
+    color: white;
+}

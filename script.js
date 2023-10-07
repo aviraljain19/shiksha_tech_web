@@ -18,3 +18,11 @@ document.getElementById('searchButton').addEventListener('click', () => {
 
     coursesSection.innerHTML = html;
 });
+// Initialize carousel after DOM is fully loaded
+document.addEventListener('DOMContentLoaded', (event) => {
+    $('.carousel').slick({
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
+});
