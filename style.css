@@ -110,7 +110,7 @@ main {
 
 .sText {
   margin-top: 20px;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   color: rgb(172, 172, 172);
 }
 
@@ -133,13 +133,13 @@ main {
   border-radius: 25px;
   width: 100%;
   height: 5vw;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
 }
 
 .search i {
   position: absolute;
   right: 20px;
-  font-size: 1.5vw;
+  font-size: 1.4vw;
   cursor: pointer;
 }
 
@@ -183,13 +183,13 @@ main {
 }
 
 .title {
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   font-weight: bold;
   margin-left: 20px;
 }
 
 .instructor{
-  font-size: 1.3vw;
+  font-size: 1.1vw;
     margin-left: 20px;
     margin-bottom: 20px;
 }
@@ -218,6 +218,7 @@ main {
   -webkit-animation: marquee 20s linear infinite;
   animation: marquee 20s linear infinite;
   margin-bottom: 50px;
+  overflow-x: scroll;
 }
 
 .categoryContainers .container {
@@ -232,7 +233,7 @@ main {
 
 .categoryContainers .title {
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   margin: 0;
 }
 
@@ -268,7 +269,7 @@ main {
 }
 
 .about ul li{
-  font-size: 1.5vw;
+  font-size: 1.3vw;
   color: black;
   margin-top: 8px;
 }
@@ -284,12 +285,12 @@ footer {
 
 footer h3 {
   margin-bottom: 10px;
-  font-size: 2.0vw;
+  font-size: 1.5vw;
 }
 
 footer p {
   color: rgb(233, 233, 233);
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 footer .f1 {
@@ -302,11 +303,11 @@ footer .f2 ul {
 
 footer a {
   color: rgb(233, 233, 233);
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   text-decoration: none;
 }
 
-@-moz-keyframes marquee {
+/* @-moz-keyframes marquee {
   0% {
     transform: translateX(100%);
   }
@@ -333,7 +334,7 @@ footer a {
     -webkit-transform: translateX(-100%);
     transform: translateX(-100%);
   }
-}
+} */
 
 @media(max-width:900px){
   nav{
@@ -399,5 +400,9 @@ footer a {
 
   .aboutImage{
     width: 100%;
+  }
+
+  .btn{
+    display: none;
   }
 }
