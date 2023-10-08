@@ -72,6 +72,68 @@ header ul li a:hover {
   border: 1px solid #2d79fc;
 }
 
+.login1{
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 60px;
+}
+
+.signUp1{
+  background-color: #2d79fc;
+  color: white;
+  border-radius: 25px;
+  padding: 10px;
+  width: 100px;
+  cursor: pointer;
+  border: 1px solid #2d79fc;
+  margin-left: 60px;
+}
+
+.hamburger{
+  display: none;
+}
+
+.ls{
+  display: none;
+}
+
+#mySidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-color: white;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  font-family: montserrat-bold, sans-serif;
+}
+
+#mySidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#mySidenav a {
+  padding: 15px;
+  text-decoration: none;
+  font-size: 14px;
+  color: black;
+  display: block;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
 hr {
   margin-top: 70px;
 }
@@ -340,6 +402,19 @@ footer a {
   nav{
     display: none;
   }
+  .btn{
+    display: flex;
+  }
+
+  .hamburger{
+    display: block;
+    align-self: center;
+    margin-left: 10px;
+  }
+
+  .hamburger ul{
+    display: block;
+  }
   
   .searchSection{
     margin-top: 30px;
@@ -359,7 +434,10 @@ footer a {
 }
 
 @media(max-width:550px){
-
+ 
+  .ls{
+    display: block;
+  }
   .intro{
     display: flex;
     flex-direction: column-reverse;
@@ -402,7 +480,8 @@ footer a {
     width: 100%;
   }
 
-  .btn{
+  .login, .signUp{
     display: none;
   }
+
 }

@@ -42,6 +42,43 @@
       <div class="btn">
         <button class="login">Login</button>
         <button class="signUp">Get Started</button>
+
+        <div class="hamburger">
+          <img
+            src="./assets/ic-web-head-hamburger.svg"
+            alt=""
+            id="menu"
+            onclick="openNav()"
+          />
+          <span id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <ul>
+              <li>
+                <a href="">Home</a>
+              </li>
+              <li>
+                <a href="">Course</a>
+              </li>
+              <li>
+                <a href="">Schemes</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+            <div class="ls">
+              <br>
+              <br>
+              <button class="login1">Login</button><br><br>
+              <button class="signUp1">Get Started</button>
+            </div>
+          </span>
+        </div>
       </div>
     </header>
     <hr />
@@ -208,8 +245,16 @@
         </section>
         <section class="aboutText">
           <h2>About <span style="color: #2d79fc">Us</span></h2>
-          <p style="font-size: 2.0vw; margin-bottom: 10px;">Focusing on Distant learning for Skill Development</p>
-          <p style="color: rgb(172, 172, 172); margin-bottom: 10px; font-size:1.3vw ;">
+          <p style="font-size: 2vw; margin-bottom: 10px">
+            Focusing on Distant learning for Skill Development
+          </p>
+          <p
+            style="
+              color: rgb(172, 172, 172);
+              margin-bottom: 10px;
+              font-size: 1.3vw;
+            "
+          >
             Shiksha.Tech is your trusted destination for personalized education,
             tech courses, and career opportunities. With a strong commitment to
             fostering learning and growth, we connect learners with a dynamic
@@ -238,18 +283,27 @@
       <div class="f2">
         <h3>Quick Links</h3>
         <ul>
-          <li><p><a href="">About</a></p></li>
-          <li><p><a href="">Course</p></a></li>
-          <li><p><a href="">Blog</p></a></li>
+          <li>
+            <p><a href="">About</a></p>
+          </li>
+          <li>
+            <p><a href="">Course</a></p>
+          </li>
+          <li>
+            <p><a href="">Blog</a></p>
+          </li>
         </ul>
       </div>
       <div class="f3">
         <h3>Contact Us</h3>
         <address>
           <p><a href="tel:+91 1234567890">+91 1234567890</a></p>
-          <p><a href="mailto:shiksha.tech@gmail.com">shiksha.tech@gmail/com</a></p>
+          <p>
+            <a href="mailto:shiksha.tech@gmail.com">shiksha.tech@gmail/com</a>
+          </p>
         </address>
       </div>
     </footer>
+    <script src="./script.js"></script>
   </body>
 </html>
