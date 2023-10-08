@@ -47,13 +47,13 @@ header ul li a {
 header ul li a:hover {
   box-sizing: content-box;
   padding: 3px;
-  background-color: #b4c6e4;
+  color: #2d79fc;
   border-radius: 5px;
 }
 
 .btn .login {
   border: 1px solid black;
-  
+  background-color: white;
   border-radius: 25px;
   padding: 10px;
   width: 100px;
@@ -215,6 +215,7 @@ main {
   -moz-animation: marquee 20s linear infinite;
   -webkit-animation: marquee 20s linear infinite;
   animation: marquee 20s linear infinite;
+  margin-bottom: 50px;
 }
 
 .categoryContainers .container {
@@ -227,7 +228,43 @@ main {
   margin: 0;
 }
 
+.about{
+  display: flex;
+  margin:100px 0px 50px 100px;
+}
+
+
+.aboutImage{
+  width: 50%;
+  float: left;
+  padding-top: 50px;
+}
+
+.aboutImage img{
+  width: 80%;
+}
+
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.aboutText{
+  width: 50%;
+  float: left;
+}
+
+.about ul{
+  color: #2d79fc;
+}
+
+.about ul li{
+  color: black;
+  margin-top: 5px;
+}
+
 footer {
+  clear: both;
   background-color: #2d79fc;
   color: white;
   display: flex;
@@ -252,7 +289,7 @@ footer .f2 ul {
   list-style: none;
 }
 
-footer .f2 ul li a {
+footer a {
   color: rgb(233, 233, 233);
   font-size: 14px;
   text-decoration: none;
