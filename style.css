@@ -283,6 +283,10 @@ main {
   overflow-x: scroll;
 }
 
+.categoryContainers::-webkit-scrollbar{
+  display: none;
+}
+
 .categoryContainers .container {
   border-radius: 10px;
   width: 20%;
@@ -483,3 +487,37 @@ footer a {
   }
 
 }
+
+
+.heading{
+  margin: 20px;
+  font-size: 3vw;
+}
+
+.searchImage{
+  width: 100px;
+  border-radius: 100px;
+  margin: 20px;
+}
+
+.searchResults{
+  background-color: #e6e3e3;
+  padding-top: 10px;
+}
+
+.courseList{
+  display: flex;
+  align-self: center;
+  list-style: none;
+}
+
+.searchList{
+  align-self: center;
+}
+
+.searchContainer{
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
