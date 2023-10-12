@@ -17,9 +17,12 @@ let searchTitle;
 
 const predict = "https://4f1e-49-43-40-65.ngrok-free.app/";
 
+
+
 searchIcon.addEventListener("click", (e) => {
   console.log("Clicked");
   searchTitle = searchText.value;
+  searchText.value="";
   console.log(searchTitle);
   localStorage.setItem("heading", searchTitle);
   location.assign("./search.html");
@@ -27,31 +30,35 @@ searchIcon.addEventListener("click", (e) => {
 
 function getStars(rating) {
 
-  // Round to nearest half
   rating = Math.round(rating * 2) / 2;
   let output = [];
 
-  // Append all the filled whole stars
+
   for (var i = rating; i >= 1; i--)
-    output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+    output.push(
+      '<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;'
+    );
 
-  // If there is a half a star, append it
-  if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
 
-  // Fill the empty stars
-  for (let i = (5 - rating); i >= 1; i--)
-    output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+  if (i == 0.5)
+    output.push(
+      '<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'
+    );
 
-  return output.join('');
+ 
+  for (let i = 5 - rating; i >= 1; i--)
+    output.push(
+      '<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'
+    );
 
+  return output.join("");
 }
 
 const star = document.querySelectorAll(".star");
 
-for(let i=0;i<star.length;i++){
+for (let i = 0; i < star.length; i++) {
   star[i].innerHTML = getStars(3.4);
 }
-
 
 const searchResults = document.querySelector(".searchResults");
 
@@ -60,7 +67,9 @@ heading.innerHTML = `Search results for "${localStorage.getItem("heading")}"`;
 
 let predictUrl = new URL(`${predict}predict?title=${heading.innerHTML}`);
 let predictImgUrl = new URL(`${predict}predictImg?title=${heading.innerHTML}`);
-let predictRatingUrl = new URL(`${predict}predictRating?title=${heading.innerHTML}`);
+let predictRatingUrl = new URL(
+  `${predict}predictRating?title=${heading.innerHTML}`
+);
 async function fetchData() {
   const response = await fetch(predictUrl, {
     method: "get",
@@ -100,7 +109,7 @@ async function fetchData() {
     const div2 = document.createElement("div");
     div2.classList = "courseInfo";
     const div3 = document.createElement("div");
-    div3.classList= "extraInfo";
+    div3.classList = "extraInfo";
     const span = document.createElement("span");
     span.classList = "instructor";
     span.innerHTML = `Instructor`;
@@ -118,5 +127,31 @@ async function fetchData() {
   }
 }
 
+function showLoading() {
+  const loadingContainer = document.getElementById('loading-container');
+  loadingContainer.style.display = 'flex'; // Display the loading container
+}
+
+// To hide the loading animation
+function hideLoading() {
+  const loadingContainer = document.getElementById('loading-container');
+  loadingContainer.style.display = 'none'; // Hide the loading container
+}
+
+function simulateAsyncTask() {
+  showLoading(); // Show loading animation
+  
+  // Simulate a delay using setTimeout
+  setTimeout(() => {
+    hideLoading(); // Hide loading animation
+  }, 3000); // Simulate a 3-second task
+}
+
+// Trigger the loading animation
+simulateAsyncTask();
+
 fetchData();
-console.log(predictUrl);
+
+
+
+
