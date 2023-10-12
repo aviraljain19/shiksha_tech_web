@@ -15,7 +15,7 @@ const searchText = document.querySelector(".searchText");
 const title = document.querySelector(".newCourses h2");
 let searchTitle;
 
-const predict = "https://4f1e-49-43-40-65.ngrok-free.app/"
+const predict = "https://4f1e-49-43-40-65.ngrok-free.app/";
 
 searchIcon.addEventListener("click", (e) => {
   console.log("Clicked");
@@ -25,44 +25,94 @@ searchIcon.addEventListener("click", (e) => {
   location.assign("./search.html");
 });
 
+function getStars(rating) {
+
+  // Round to nearest half
+  rating = Math.round(rating * 2) / 2;
+  let output = [];
+
+  // Append all the filled whole stars
+  for (var i = rating; i >= 1; i--)
+    output.push('<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+  // If there is a half a star, append it
+  if (i == .5) output.push('<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+  // Fill the empty stars
+  for (let i = (5 - rating); i >= 1; i--)
+    output.push('<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;');
+
+  return output.join('');
+
+}
+
+const star = document.querySelectorAll(".star");
+
+for(let i=0;i<star.length;i++){
+  star[i].innerHTML = getStars(3.4);
+}
+
+
 const searchResults = document.querySelector(".searchResults");
 
-
 const heading = document.querySelector(".heading");
-heading.innerHTML = `${localStorage.getItem("heading")}`;
+heading.innerHTML = `Search results for "${localStorage.getItem("heading")}"`;
 
 let predictUrl = new URL(`${predict}predict?title=${heading.innerHTML}`);
 let predictImgUrl = new URL(`${predict}predictImg?title=${heading.innerHTML}`);
-async function fetchData(){
-  const response = await fetch(predictUrl,{
+let predictRatingUrl = new URL(`${predict}predictRating?title=${heading.innerHTML}`);
+async function fetchData() {
+  const response = await fetch(predictUrl, {
     method: "get",
     headers: new Headers({
       "ngrok-skip-browser-warning": "69420",
     }),
-  })
+  });
   const data = await response.json();
   console.log(data);
-  const response2 = await fetch(predictImgUrl,{
+  const response2 = await fetch(predictImgUrl, {
     method: "get",
     headers: new Headers({
       "ngrok-skip-browser-warning": "69420",
     }),
-  })
+  });
   const data2 = await response2.json();
   console.log(data2);
+  const response3 = await fetch(predictRatingUrl, {
+    method: "get",
+    headers: new Headers({
+      "ngrok-skip-browser-warning": "69420",
+    }),
+  });
+  const data3 = await response3.json();
+  console.log(data3);
   for (let i = 0; i < data.length; i++) {
     const div = document.createElement("div");
-    div.classList = "searchContainer";
+    div.classList = "container";
     const ul = document.createElement("ul");
     ul.classList = "courseList";
     const li = document.createElement("li");
     li.innerHTML = `${data[i]}`;
-    li.classList = "searchList";
+    li.classList = "title";
     const image = document.createElement("img");
     image.src = `${data2[i]}`;
-    image.classList = "searchImage";
+    image.classList = "containerImg";
+    const div2 = document.createElement("div");
+    div2.classList = "courseInfo";
+    const div3 = document.createElement("div");
+    div3.classList= "extraInfo";
+    const span = document.createElement("span");
+    span.classList = "instructor";
+    span.innerHTML = `Instructor`;
+    const span2 = document.createElement("span");
+    span2.classList = "instructor";
+    span2.innerHTML = `${getStars(data3[i])}`;
     ul.appendChild(image);
-    ul.appendChild(li);
+    div2.appendChild(li);
+    div3.appendChild(span);
+    div3.appendChild(span2);
+    div2.appendChild(div3);
+    ul.appendChild(div2);
     div.appendChild(ul);
     searchResults.appendChild(div);
   }
@@ -70,10 +120,3 @@ async function fetchData(){
 
 fetchData();
 console.log(predictUrl);
-
-
-
-
-
-
-
