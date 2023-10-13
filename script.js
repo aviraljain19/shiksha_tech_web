@@ -61,7 +61,6 @@ const searchText = document.querySelector(".searchText");
 const title = document.querySelector(".newCourses h2");
 let searchTitle;
 
-
 const predict = "https://4f1e-49-43-40-65.ngrok-free.app/";
 
 searchIcon.addEventListener("click", (e) => {
@@ -77,20 +76,17 @@ searchIcon.addEventListener("click", (e) => {
 let bool = localStorage.getItem("bool");
 
 function courseSearch() {
-  localStorage.setItem("bool","false")
+  localStorage.setItem("bool", "false");
   console.log("ssds");
   const searchResults = document.querySelector(".searchResults");
 
   const heading = document.querySelector(".heading");
   heading.innerHTML = `Search results for "${localStorage.getItem("heading")}"`;
+  let course = localStorage.getItem("heading");
 
-  let predictUrl = new URL(`${predict}predict?title=${heading.innerHTML}`);
-  let predictImgUrl = new URL(
-    `${predict}predictImg?title=${heading.innerHTML}`
-  );
-  let predictRatingUrl = new URL(
-    `${predict}predictRating?title=${heading.innerHTML}`
-  );
+  let predictUrl = new URL(`${predict}predict?title=${course}`);
+  let predictImgUrl = new URL(`${predict}predictImg?title=${course}`);
+  let predictRatingUrl = new URL(`${predict}predictRating?title=${course}`);
   async function fetchSearchData() {
     const response = await fetch(predictUrl, {
       method: "get",
@@ -152,14 +148,13 @@ function courseSearch() {
   simulateAsyncTask();
 }
 
-if(bool == "true"){
+if (bool == "true") {
   courseSearch();
 }
 
 //Intern page
 
-const form = document.querySelector("form")
-
+const form = document.querySelector("form");
 
 let internSearchTitle;
 const searchIcon2 = document.querySelector("#internSearchIcon");
@@ -167,14 +162,105 @@ const internSearch = document.querySelector("#internSearch");
 searchIcon2.addEventListener("click", (e) => {
   console.log("Clicked");
   internSearchTitle = internSearch.value;
-  internSearch.value = "";
   console.log(internSearchTitle);
   localStorage.setItem("internDomain", internSearchTitle);
   internPage();
 });
 
-function internPage(){
-  localStorage.setItem("bool2","false");
+function internPage() {
   console.log("inside internpage1");
-  
+
+  let domain = localStorage.getItem("internDomain");
+
+  let internDomain = new URL(`${predict}intern?domain=${domain}`);
+  let internComapany = new URL(`${predict}internCompany?domain=${domain}`);
+  let internLocation = new URL(`${predict}internLocation?domain=${domain}`);
+  let internDuration = new URL(`${predict}internDuration?domain=${domain}`);
+  let internStipend = new URL(`${predict}internStipend?domain=${domain}`);
+
+  const cardContainer = document.querySelector(".cardContainer");
+
+  async function fetchSearchData() {
+    const response = await fetch(internDomain, {
+      method: "get",
+      headers: new Headers({
+        "ngrok-skip-browser-warning": "69420",
+      }),
+    });
+    const data = await response.json();
+    console.log(data);
+    const response2 = await fetch(internComapany, {
+      method: "get",
+      headers: new Headers({
+        "ngrok-skip-browser-warning": "69420",
+      }),
+    });
+    const data2 = await response2.json();
+    console.log(data2);
+    const response3 = await fetch(internLocation, {
+      method: "get",
+      headers: new Headers({
+        "ngrok-skip-browser-warning": "69420",
+      }),
+    });
+    const data3 = await response3.json();
+    console.log(data3);
+    const response4 = await fetch(internDuration, {
+      method: "get",
+      headers: new Headers({
+        "ngrok-skip-browser-warning": "69420",
+      }),
+    });
+    const data4 = await response4.json();
+    console.log(data4);
+    const response5 = await fetch(internStipend, {
+      method: "get",
+      headers: new Headers({
+        "ngrok-skip-browser-warning": "69420",
+      }),
+    });
+    const data5 = await response5.json();
+    console.log(data5);
+    for (let i = 0; i < data.length; i++) {
+      const card = document.createElement("div");
+      card.classList = "card";
+      const image = document.createElement("div");
+      image.classList = "image";
+      const imgSrc = document.createElement("img");
+      imgSrc.src = "./assets/app.png";
+      imgSrc.alt = "intern image";
+      const cardContent = document.createElement("div");
+      cardContent.classList = "card-content";
+      const h2 = document.createElement("h2");
+      const p1 = document.createElement("p");
+      const p2 = document.createElement("p");
+      const p3 = document.createElement("p");
+      const p4 = document.createElement("p");
+      const a1 = document.createElement("a");
+      a1.classList = "apply-button";
+      const a2 = document.createElement("a");
+      a2.classList = "learn-more-button";
+      h2.innerHTML = data[i];
+      p1.innerHTML = data2[i];
+      p2.innerHTML = `Location:${data3[i]}`;
+      p3.innerHTML = `Duration:${data4[i]}`;
+      p4.innerHTML = `Stipend:${data5[i]}`;
+      a1.innerHTML = "Apply Now";
+      a2.innerHTML = "Learn More";
+      cardContent.appendChild(h2);
+      cardContent.appendChild(p1);
+      cardContent.appendChild(p2);
+      cardContent.appendChild(p3);
+      cardContent.appendChild(p4);
+      cardContent.appendChild(a1);
+      cardContent.appendChild(a2);
+      image.appendChild(imgSrc);
+      card.appendChild(image);
+      card.appendChild(cardContent);
+      cardContainer.appendChild(card);
+    }
+  }
+
+  fetchSearchData();
+
 }

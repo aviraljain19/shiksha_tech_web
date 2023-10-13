@@ -207,7 +207,7 @@ main {
   color: black;
   clear: both;
   position: relative;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
   top: 30px;
   padding: 50px;
 }
@@ -283,7 +283,7 @@ main {
 }
 
 .categories {
-  padding: 50px;
+  padding: 0px 50px 0px 50px;
 }
 
 .categories h2 {
@@ -323,9 +323,9 @@ main {
 }
 
 .about {
-  padding: 50px;
+  padding: 0px 50px 0px 50px;
   display: flex;
-  margin: 100px 0px 50px 100px;
+  margin: 50px 0px 50px 100px;
 }
 
 .aboutImage {
@@ -507,6 +507,10 @@ footer a {
   .signUp {
     display: none;
   }
+
+  .courseContainers {
+    justify-content: center;
+  }
 }
 
 .heading {
@@ -568,8 +572,7 @@ footer a {
   font-size: 18px;
 }
 
-
-.intern{
+.intern {
   margin-top: 100px;
 }
 
@@ -623,15 +626,17 @@ footer a {
 .card .learn-more-button {
   text-decoration: none;
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 15px;
   border-radius: 5px;
   margin-top: 10px;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .card .apply-button {
-  background-color: #007BFF;
+  background-color: #007bff;
   color: #fff;
+  margin-right: 10px;
 }
 
 .card .apply-button:hover {
@@ -649,11 +654,11 @@ footer a {
 
 @media (max-width: 768px) {
   .card {
-      flex-direction: column;
+    flex-direction: column;
   }
 
   .card .image {
-      max-width: 100%; 
-      height: auto; 
+    max-width: 100%;
+    height: auto;
   }
 }
