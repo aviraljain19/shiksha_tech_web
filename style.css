@@ -400,6 +400,10 @@ footer a {
     display: flex;
   }
 
+  .search input {
+    height: auto;
+  }
+
   .hamburger {
     display: block;
     align-self: center;
@@ -436,6 +440,7 @@ footer a {
   }
   .search input {
     font-size: 2.2vw;
+    height: auto;
   }
 
   .search i {
@@ -640,4 +645,15 @@ footer a {
 
 .card .learn-more-button:hover {
   background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  .card {
+      flex-direction: column;
+  }
+
+  .card .image {
+      max-width: 100%; 
+      height: auto; 
+  }
 }
