@@ -143,10 +143,15 @@ function courseSearch() {
       ul.appendChild(div2);
       div.appendChild(ul);
       searchResults.appendChild(div);
+      const container = document.querySelector(".container");
+      container.addEventListener("click", () => {
+        location.assign("./lectureScreen.html");
+      });
     }
   }
 
   fetchSearchData();
+
   simulateAsyncTask();
 }
 
@@ -166,7 +171,7 @@ searchIcon2.addEventListener("click", (e) => {
   internSearchTitle = internSearch.value;
   console.log(internSearchTitle);
   localStorage.setItem("internDomain", internSearchTitle);
-  cardContainer.innerHTML="";
+  cardContainer.innerHTML = "";
   internPage();
 });
 
@@ -180,8 +185,6 @@ function internPage() {
   let internLocation = new URL(`${predict}internLocation?domain=${domain}`);
   let internDuration = new URL(`${predict}internDuration?domain=${domain}`);
   let internStipend = new URL(`${predict}internStipend?domain=${domain}`);
-
-  
 
   async function fetchSearchData() {
     simulateAsyncTask();
@@ -231,7 +234,7 @@ function internPage() {
       const image = document.createElement("div");
       image.classList = "image";
       const imgSrc = document.createElement("img");
-      imgSrc.src = "./assets/app.png";
+      imgSrc.src = "./assets/11c5a6feba3335c47804cedb68b69dbd.jpg";
       imgSrc.alt = "intern image";
       const cardContent = document.createElement("div");
       cardContent.classList = "card-content";
@@ -266,9 +269,6 @@ function internPage() {
   }
 
   fetchSearchData();
-  
 }
 
 // lecture screen
-
-
