@@ -35,11 +35,13 @@ for (let i = 0; i < star.length; i++) {
 }
 
 function showLoading() {
+  console.log("loading");
   const loadingContainer = document.getElementById("loading-container");
   loadingContainer.style.display = "flex";
 }
 
 function hideLoading() {
+  console.log("Not loading");
   const loadingContainer = document.getElementById("loading-container");
   loadingContainer.style.display = "none";
 }
@@ -155,7 +157,7 @@ if (bool == "true") {
 //Intern page
 
 const form = document.querySelector("form");
-
+const cardContainer = document.querySelector(".cardContainer");
 let internSearchTitle;
 const searchIcon2 = document.querySelector("#internSearchIcon");
 const internSearch = document.querySelector("#internSearch");
@@ -164,6 +166,7 @@ searchIcon2.addEventListener("click", (e) => {
   internSearchTitle = internSearch.value;
   console.log(internSearchTitle);
   localStorage.setItem("internDomain", internSearchTitle);
+  cardContainer.innerHTML="";
   internPage();
 });
 
@@ -178,9 +181,10 @@ function internPage() {
   let internDuration = new URL(`${predict}internDuration?domain=${domain}`);
   let internStipend = new URL(`${predict}internStipend?domain=${domain}`);
 
-  const cardContainer = document.querySelector(".cardContainer");
+  
 
   async function fetchSearchData() {
+    simulateAsyncTask();
     const response = await fetch(internDomain, {
       method: "get",
       headers: new Headers({
@@ -262,5 +266,5 @@ function internPage() {
   }
 
   fetchSearchData();
-
+  
 }
