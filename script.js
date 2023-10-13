@@ -17,35 +17,29 @@ let searchTitle;
 
 const predict = "https://4f1e-49-43-40-65.ngrok-free.app/";
 
-
-
 searchIcon.addEventListener("click", (e) => {
   console.log("Clicked");
   searchTitle = searchText.value;
-  searchText.value="";
+  searchText.value = "";
   console.log(searchTitle);
   localStorage.setItem("heading", searchTitle);
   location.assign("./search.html");
 });
 
 function getStars(rating) {
-
   rating = Math.round(rating * 2) / 2;
   let output = [];
-
 
   for (var i = rating; i >= 1; i--)
     output.push(
       '<i class="fa fa-star" aria-hidden="true" style="color: gold;"></i>&nbsp;'
     );
 
-
   if (i == 0.5)
     output.push(
       '<i class="fa fa-star-half-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'
     );
 
- 
   for (let i = 5 - rating; i >= 1; i--)
     output.push(
       '<i class="fa fa-star-o" aria-hidden="true" style="color: gold;"></i>&nbsp;'
@@ -70,7 +64,7 @@ let predictImgUrl = new URL(`${predict}predictImg?title=${heading.innerHTML}`);
 let predictRatingUrl = new URL(
   `${predict}predictRating?title=${heading.innerHTML}`
 );
-async function fetchData() {
+async function fetchSearchData() {
   const response = await fetch(predictUrl, {
     method: "get",
     headers: new Headers({
@@ -128,30 +122,23 @@ async function fetchData() {
 }
 
 function showLoading() {
-  const loadingContainer = document.getElementById('loading-container');
-  loadingContainer.style.display = 'flex'; // Display the loading container
+  const loadingContainer = document.getElementById("loading-container");
+  loadingContainer.style.display = "flex";
 }
 
-// To hide the loading animation
 function hideLoading() {
-  const loadingContainer = document.getElementById('loading-container');
-  loadingContainer.style.display = 'none'; // Hide the loading container
+  const loadingContainer = document.getElementById("loading-container");
+  loadingContainer.style.display = "none";
 }
 
 function simulateAsyncTask() {
-  showLoading(); // Show loading animation
-  
-  // Simulate a delay using setTimeout
+  showLoading();
+
   setTimeout(() => {
-    hideLoading(); // Hide loading animation
-  }, 3000); // Simulate a 3-second task
+    hideLoading();
+  }, 3000);
 }
 
-// Trigger the loading animation
 simulateAsyncTask();
 
-fetchData();
-
-
-
-
+fetchSearchData();

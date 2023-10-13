@@ -142,7 +142,7 @@ main {
   z-index: 1;
 }
 
-.intro{
+.intro {
   margin: 50px;
 }
 
@@ -235,7 +235,7 @@ main {
   border-radius: 25px;
   width: 30%;
   color: black;
-  padding: 10px
+  padding: 10px;
 }
 
 .containerImg {
@@ -245,7 +245,7 @@ main {
   height: 70%;
 }
 
-.courseInfo{
+.courseInfo {
   height: 30%;
   padding: 10px;
   padding-bottom: 20px;
@@ -258,7 +258,7 @@ main {
   margin-bottom: 10px;
 }
 
-.extraInfo{
+.extraInfo {
   display: flex;
   justify-content: space-between;
   height: 40%;
@@ -282,7 +282,7 @@ main {
   border: 1px solid #2d79fc;
 }
 
-.categories{
+.categories {
   padding: 50px;
 }
 
@@ -392,7 +392,7 @@ footer a {
   text-decoration: none;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   nav {
     display: none;
   }
@@ -549,8 +549,12 @@ footer a {
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .loading-text {
@@ -560,4 +564,12 @@ footer a {
 }
 
 
+.intern{
+  margin-top: 100px;
+}
 
+.searchSection2 {
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
