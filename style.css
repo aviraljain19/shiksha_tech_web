@@ -663,3 +663,30 @@ footer a {
     height: auto;
   }
 }
+
+
+#video-container {
+  width: 60%;
+  margin: 150px auto 50px auto;
+}
+
+video {
+  width: 100%;
+}
+
+.topics{
+  width: 60%;
+  margin: 0 auto;
+}
+.topicContainer{
+  display: flex;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.topicContainer i{
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+
