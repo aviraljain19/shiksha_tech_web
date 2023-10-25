@@ -95,6 +95,9 @@ function courseSearch() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
+    }).catch((err)=>{
+      alert("Server is down, please try again later");
+      location.assign("./index.html");
     });
     const data = await response.json();
     console.log(data);
@@ -193,6 +196,9 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
+    }).catch((err)=>{
+      alert("Server is down, please try again later");
+      location.assign("./index.html");
     });
     const data = await response.json();
     console.log(data);
@@ -201,6 +207,9 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
+    }).catch((err)=>{
+      alert("Server is down, please try again later");
+      location.assign("./index.html");
     });
     const data2 = await response2.json();
     console.log(data2);
@@ -209,6 +218,9 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
+    }).catch((err)=>{
+      alert("Server is down, please try again later");
+      location.assign("./index.html");
     });
     const data3 = await response3.json();
     console.log(data3);
@@ -217,6 +229,9 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
+    }).catch((err)=>{
+      alert("Server is down, please try again later");
+      location.assign("./index.html");
     });
     const data4 = await response4.json();
     console.log(data4);
@@ -225,6 +240,9 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
+    }).catch((err)=>{
+      alert("Server is down, please try again later");
+      location.assign("./index.html");
     });
     const data5 = await response5.json();
     console.log(data5);
