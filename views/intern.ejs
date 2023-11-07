@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shiksha.Tech</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@300;400&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8e2867f597.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%-include('partials/nav.ejs')%>
+    <main class="intern">
+      <form>
+        <section class="searchSection2">
+          <div class="search">
+            <input
+              type="text"
+              class="searchText"
+              placeholder="Search For internships"
+              style="width: 50%"
+              id="internSearch"
+            />
+            <i
+              class="fa-solid fa-magnifying-glass"
+              style="color: #919191; right: 28%"
+              id="internSearchIcon"
+              class="internSearchIcon"
+            ></i>
+          </div>
+        </section>
+      </form>
+      
+      <div class="cardContainer">
+        <!-- <div class="card">
+          <div class="image">
+            <img src="internship-image.jpg" alt="Internship Image" />
+          </div>
+          <div class="card-content">
+            <h2>Web Development</h2>
+            <p>Company Name</p>
+            <p>Location: City, State</p>
+            <p>Duration: 3 months</p>
+            <p>Stipend: $1000/month</p>
+            <a href="#" class="apply-button">Apply Now</a>
+            <a href="#" class="learn-more-button">Learn More</a>
+          </div>
+        </div> -->
+      </div>
+    </main>
+    <div id="loading-container" class="loading-container">
+        <div class="loading-spinner"></div>
+        <div class="loading-text">Loading...</div>
+      </div>
+    <div id="searchIcon"></div>
+    <script src="/scripts/script.js"></script>
+  </body>
+</html>
