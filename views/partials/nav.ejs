@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="/styles/style.css" />
+<link rel="stylesheet" href="/styles/nav.css" />
 
 <header>
     <img src="/assets/Shiksha.Tech Logo.png" height="50px" />
@@ -25,8 +25,8 @@
       </ul>
     </nav>
     <div class="btn">
-      <button class="login">Login</button>
-      <button class="signUp">Get Started</button>
+      <button class="login" onclick="location.assign('/login')">Login</button>
+      <button class="signUp" onclick="location.assign('/register')">Get Started</button>
 
       <div class="hamburger">
         <img
@@ -62,10 +62,13 @@
           <div class="ls">
             <br />
             <br />
-            <button class="login1">Login</button><br /><br />
-            <button class="signUp1">Get Started</button>
+            <button class="login1" onclick="location.assign('/login')">Login</button><br /><br />
+            <button class="signUp1" onclick="location.assign('/register')">Get Started</button>
           </div>
         </span>
       </div>
     </div>
   </header>
+  <div id="searchIcon"></div>
+    <div id="internSearchIcon"></div>
+  <script src="/scripts/script.js"></script>

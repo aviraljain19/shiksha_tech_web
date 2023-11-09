@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shiksha.Tech</title>
+    <link rel="icon" type="image/x-icon" href="../public/assets/favicon.ico" />
+    <link rel="stylesheet" href="/styles/login.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Slab:wght@300;400&family=Young+Serif&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/8e2867f597.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%-include('partials/nav.ejs')%>
+    <h2>Register your account</h2>
+    <div class="container">
+      <form action="/register" method="post">
+        <img
+          src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Image.png"
+          alt=""
+          width="150px"
+          style="background: transparent"
+        />
+        <input type="text" name="fullname" placeholder="Full name" />
+        <input type="text" name="username" placeholder="Username" />
+        <input type="password" name="password" placeholder="Password" />
+        <input type="submit" value="Register" id="submit" />
+      </form>
+    </div>
+  </body>
+</html>
