@@ -18,14 +18,19 @@
     ></script>
   </head>
   <body>
-    <%-include('partials/nav.ejs')%> 
+    <%-include('partials/nav.ejs')%>
     <h2>Login to your account</h2>
     <div class="container">
       <form action="/login" method="post">
-        <img src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Image.png" alt="" width="150px" style="background: transparent;">
+        <img
+          src="https://www.pngall.com/wp-content/uploads/5/User-Profile-PNG-Image.png"
+          alt=""
+          width="150px"
+          style="background: transparent"
+        />
         <input type="text" name="username" placeholder="Username" />
         <input type="password" name="password" placeholder="Password" />
-        <input type="submit" value="Login" id="submit"/>
+        <input type="submit" value="Login" id="submit" />
       </form>
     </div>
   </body>

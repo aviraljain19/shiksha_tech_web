@@ -1,5 +1,3 @@
-
-
 function openNav() {
   document.getElementById("mySidenav").style.width = "270px";
 }
@@ -74,7 +72,7 @@ searchIcon.addEventListener("click", (e) => {
   searchText.value = "";
   console.log(searchTitle);
   localStorage.setItem("heading", searchTitle);
-  location.assign("/search")
+  location.assign("/search");
 });
 
 let bool = localStorage.getItem("bool");
@@ -97,7 +95,7 @@ function courseSearch() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
-    }).catch((err)=>{
+    }).catch((err) => {
       alert("Server is down, please try again later");
       location.assign("/");
     });
@@ -198,7 +196,7 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
-    }).catch((err)=>{
+    }).catch((err) => {
       alert("Server is down, please try again later");
       location.assign("/");
     });
@@ -209,7 +207,7 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
-    }).catch((err)=>{
+    }).catch((err) => {
       alert("Server is down, please try again later");
       location.assign("/");
     });
@@ -220,7 +218,7 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
-    }).catch((err)=>{
+    }).catch((err) => {
       alert("Server is down, please try again later");
       location.assign("/");
     });
@@ -231,7 +229,7 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
-    }).catch((err)=>{
+    }).catch((err) => {
       alert("Server is down, please try again later");
       location.assign("/");
     });
@@ -242,7 +240,7 @@ function internPage() {
       headers: new Headers({
         "ngrok-skip-browser-warning": "69420",
       }),
-    }).catch((err)=>{
+    }).catch((err) => {
       alert("Server is down, please try again later");
       location.assign("/");
     });
