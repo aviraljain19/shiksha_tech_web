@@ -1,5 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
+const bcryptjs = require("bcryptjs");
 
 const app = express();
 
@@ -53,8 +54,8 @@ app.post("/login", async (req, res) => {
             msg:"invalid credentials"
         })
     }
-    if(req.body.password === studentFound.password){
-        res.render('index')
+    if(await bcryptjs.compare(req.body.password, studentFound.password)){
+        res.render('index');
     }else{
         return res.json({
             msg:"invalid credentials"
@@ -68,10 +69,12 @@ app.get("/login", (req, res) => {
 
 app.post("/register", async (req, res) => {
  const { fullname, username, password } = req.body;
+ const salt = await bcryptjs.genSalt(10);
+ const hashed = await bcryptjs.hash(password,salt);
   const student = await Student.create({
     fullname,
     username,
-    password,
+    password: hashed,
   });
   res.redirect("/login");
 });
