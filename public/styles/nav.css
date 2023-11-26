@@ -132,3 +132,37 @@ header ul li a:hover {
   transition: 0.3s;
   font-weight: bold;
 }
+
+@media (max-width: 950px) {
+  nav {
+    display: none;
+  }
+  .btn {
+    display: flex;
+  }
+
+  .search input {
+    height: auto;
+  }
+
+  .hamburger {
+    display: block;
+    align-self: center;
+    margin-left: 10px;
+  }
+
+  .hamburger ul {
+    display: block;
+  }
+}
+
+@media (max-width: 550px) {
+  .login,
+  .signUp {
+    display: none;
+  }
+
+  .ls {
+    display: block;
+  }
+}

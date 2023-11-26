@@ -12,6 +12,8 @@ app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
 
+let isLoggedIn = false;
+
 mongoose
   .connect(
     "mongodb+srv://aviraljain:jK499gdydHWxE10J@shikshatech.evqd53u.mongodb.net/?retryWrites=true&w=majority"
@@ -32,7 +34,7 @@ const studentSchema = mongoose.Schema({
 const Student = mongoose.model("Student", studentSchema);
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index",{isLoggedIn: isLoggedIn});
 });
 
 app.get("/search", (req, res) => {
@@ -55,7 +57,8 @@ app.post("/login", async (req, res) => {
         })
     }
     if(await bcryptjs.compare(req.body.password, studentFound.password)){
-        res.render('index');
+      isLoggedIn = true;
+        res.redirect('/');
     }else{
         return res.json({
             msg:"invalid credentials"
