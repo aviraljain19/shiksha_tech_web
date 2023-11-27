@@ -18,11 +18,85 @@
     ></script>
   </head>
   <body>
-    <%-include('partials/nav.ejs')%>
+    <header>
+      <img src="/assets/Shiksha.Tech Logo.png" height="50px" />
+      <nav>
+        <ul>
+          <li>
+            <a href="/">Home</a>
+          </li>
+          <li>
+            <a href="">Course</a>
+          </li>
+          <li>
+            <a href="">Schemes</a>
+          </li>
+          <li>
+            <a href="/intern">Internships</a>
+          </li>
+          <li>
+            <a href="">About</a>
+          </li>
+          <li>
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="btn">
+        <button class="login" onclick="location.assign('/login')">Login</button>
+        <button class="signUp" onclick="location.assign('/register')">
+          Get Started
+        </button>
+    
+        <div class="hamburger">
+          <img
+            src="/assets/ic-web-head-hamburger.svg"
+            alt=""
+            id="menu"
+            onclick="openNav()"
+          />
+          <span id="mySidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+              >&times;</a
+            >
+            <ul>
+              <li>
+                <a href="/">Home</a>
+              </li>
+              <li>
+                <a href="">Course</a>
+              </li>
+              <li>
+                <a href="">Schemes</a>
+              </li>
+              <li>
+                <a href="/intern">Internships</a>
+              </li>
+              <li>
+                <a href="">About</a>
+              </li>
+              <li>
+                <a href="">Contact</a>
+              </li>
+            </ul>
+            <div class="ls">
+              <br />
+              <br />
+              <button class="login1" onclick="location.assign('/login')">
+                Login</button
+              ><br /><br />
+              <button class="signUp1" onclick="location.assign('/register')">
+                Get Started
+              </button>
+            </div>
+          </span>
+        </div>
+      </div>
+    </header>
     <main>
       <div id="video-container">
         <video
-          src="https://c891-49-38-140-225.ngrok-free.app/Web/Installing%20VS%20Code%20&%20How%20Websites%20Work%20_%20Sigma%20Web%20Development%20Course%20-%20Tutorial%201.mp4"
+          src="https://bdef-49-43-43-242.ngrok-free.app/Web/Installing%20VS%20Code%20&%20How%20Websites%20Work%20_%20Sigma%20Web%20Development%20Course%20-%20Tutorial%201.mp4"
           controls
         >
           Your browser does not support the video tag.

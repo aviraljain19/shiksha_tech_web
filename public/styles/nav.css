@@ -166,3 +166,32 @@ header ul li a:hover {
     display: block;
   }
 }
+
+.searchSection {
+  margin-top: 60px;
+  display: flex;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 90%;
+}
+
+.search input {
+  padding: 10px;
+  position: relative;
+  border-radius: 25px;
+  width: 100%;
+  height: 5vw;
+  font-size: 1.4vw;
+}
+
+.search i {
+  position: absolute;
+  right: 20px;
+  font-size: 1.4vw;
+  cursor: pointer;
+}

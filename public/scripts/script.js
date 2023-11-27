@@ -63,7 +63,7 @@ const searchText = document.querySelector(".searchText");
 const title = document.querySelector(".newCourses h2");
 let searchTitle;
 
-const predict = "https://61d5-157-34-28-134.ngrok-free.app/";
+const predict = "https://15b2-49-43-43-242.ngrok-free.app/";
 
 searchIcon.addEventListener("click", (e) => {
   localStorage.setItem("bool", "true");

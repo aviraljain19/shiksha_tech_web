@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bcryptjs = require("bcryptjs");
+const cookieparser = require("cookie-parser");
+const session = require("express-session");
 
 const app = express();
 
@@ -11,6 +13,13 @@ app.use(express.static(__dirname + "/public"));
 app.use(express.json());
 
 app.use(express.urlencoded({ extended: true }));
+
+app.use(session({
+  secret:"dasda3adssa",
+  resave: true,
+  saveUninitialized: true,
+  cookie: { maxAge: 60000},
+}))
 
 let isLoggedIn = false;
 
@@ -57,7 +66,7 @@ app.post("/login", async (req, res) => {
         })
     }
     if(await bcryptjs.compare(req.body.password, studentFound.password)){
-      isLoggedIn = true;
+      
         res.redirect('/');
     }else{
         return res.json({
